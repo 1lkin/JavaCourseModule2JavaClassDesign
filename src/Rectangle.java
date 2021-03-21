@@ -62,7 +62,7 @@ public class Rectangle {
         } else { return false;}
     }
 
-    public double diagonal() {
+    public double getDiagonal() {
         return Math.sqrt(Math.pow(this.getLength(),2)
                        + Math.pow(this.getWidth(),2));
     }
@@ -84,10 +84,14 @@ public class Rectangle {
 // 4. Override toString() method.
     @Override
     public String toString() {
-        return "Rectangle{" +
-                "length=" + length +
-                ", width=" + width +
-                '}';
+        return "Rectangle\n===========================\n" +
+                "||\tlength:\t\t" + length +
+                "\n||\twidth:\t\t" + width +
+                "\n||\tpeimeter:\t" + getPerimeter() +
+                "\n||\tarea:\t\t" + getArea() +
+                "\n||\tdiagonal:\t" + getDiagonal() +
+                "\n||\tsquare:\t\t" + isSquare() +
+                "\n===========================\n";
     }
     public String toString(String name){
         return name +
